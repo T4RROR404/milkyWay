@@ -17,6 +17,7 @@
 		3E20100A2873660F00344BCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E2010082873660F00344BCB /* LaunchScreen.storyboard */; };
 		3EB2E25328761F32009893E6 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EB2E25228761F32009893E6 /* explosion.mp3 */; };
 		3EB2E25528761F9C009893E6 /* shot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EB2E25428761F9C009893E6 /* shot.mp3 */; };
+		3EB2E25A28763558009893E6 /* pricedown.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EB2E25928763558009893E6 /* pricedown.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		3E2010092873660F00344BCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EB2E25228761F32009893E6 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		3EB2E25428761F9C009893E6 /* shot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shot.mp3; sourceTree = "<group>"; };
+		3EB2E25928763558009893E6 /* pricedown.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pricedown.ttf; sourceTree = "<group>"; };
+		3EB2E25B287637BB009893E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				3E2010032873660F00344BCB /* Main.storyboard */,
 				3E2010062873660F00344BCB /* Assets.xcassets */,
 				3E2010082873660F00344BCB /* LaunchScreen.storyboard */,
+				3EB2E25928763558009893E6 /* pricedown.ttf */,
+				3EB2E25B287637BB009893E6 /* Info.plist */,
 				3E201010287377A400344BCB /* sounds */,
 			);
 			path = milkyWay;
@@ -143,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB2E25A28763558009893E6 /* pricedown.ttf in Resources */,
 				3E2010052873660F00344BCB /* Main.storyboard in Resources */,
 				3E200FFC2873660F00344BCB /* GameScene.sks in Resources */,
 				3E2010072873660F00344BCB /* Assets.xcassets in Resources */,
@@ -311,6 +317,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GXFWFBC9BM;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = milkyWay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -342,6 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GXFWFBC9BM;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = milkyWay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
