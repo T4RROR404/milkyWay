@@ -49,7 +49,6 @@ class GameOverScene: SKScene {
         hightScoreLabel.position = CGPoint(x: self.size.width / 2, y: self.size.height * 0.45)
         self.addChild(hightScoreLabel)
         
-        
         restartButton.text = "Restart"
         restartButton.fontSize = 90
         restartButton.fontColor = SKColor.white
