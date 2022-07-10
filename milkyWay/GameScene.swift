@@ -12,27 +12,22 @@ var gameScore = 0
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    
     let scoreLabel = SKLabelNode(fontNamed: "pricedown")
-    
     var livesNumber = 3
     let livesLabel = SKLabelNode(fontNamed: "pricedown")
-    
     var levelNumber = 0
-    
     let player = SKSpriteNode(imageNamed: "playerShip")
     let shotSound = SKAction.playSoundFileNamed("shot", waitForCompletion: false)
     let explosionSound = SKAction.playSoundFileNamed("explosion", waitForCompletion: false)
-    
     let tapToStartLabel = SKLabelNode(fontNamed: "pricedown")
+    var currentGameState = gameState.preGame
+    var gameArea: CGRect
     
     enum gameState {
         case preGame
         case inGame
         case afterGame
     }
-    
-    var currentGameState = gameState.preGame
     
     struct PhysicsCategories {
         static let None: UInt32 = 0
@@ -48,8 +43,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func random(min: CGFloat, max: CGFloat) -> CGFloat {
         return random() * (max - min) + min
     }
-    
-    var gameArea: CGRect
     
     override init(size: CGSize) {
         
@@ -69,7 +62,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMove(to view: SKView) {
         
         gameScore = 0
-        
         self.physicsWorld.contactDelegate = self
         
         for i in 0...1 {
@@ -388,5 +380,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
-
 }

@@ -54,11 +54,11 @@ class GameOverScene: SKScene {
         restartButton.fontColor = SKColor.white
         restartButton.zPosition = 1
         restartButton.position = CGPoint(x: self.size.width / 2, y: self.size.height * 0.3)
-        self.addChild(restartButton)
-        
+        self.addChild(restartButton)        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         for touch: AnyObject in touches {
             
             let pointOfTouch = touch.location(in: self)
@@ -71,5 +71,4 @@ class GameOverScene: SKScene {
             }
         }
     }
-    
 }
