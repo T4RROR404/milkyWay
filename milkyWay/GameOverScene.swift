@@ -64,7 +64,7 @@ class GameOverScene: SKScene {
             let pointOfTouch = touch.location(in: self)
             
             if restartButton.contains(pointOfTouch) {
-                let sceneToMove = GameOverScene(size: self.size)
+                let sceneToMove = GameScene(size: self.size)
                 sceneToMove.scaleMode = self.scaleMode
                 let myTransition = SKTransition.fade(withDuration: 0.5)
                 self.view!.presentScene(sceneToMove, transition: myTransition)
