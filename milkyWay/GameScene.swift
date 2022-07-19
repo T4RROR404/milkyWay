@@ -77,7 +77,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         }
         
-        player.setScale(1)
+        player.setScale(1.5)
         player.position = CGPoint(x: self.size.width/2, y: 0 - player.size.height)
         player.zPosition = 2
         player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
@@ -179,7 +179,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func addScore() {
         gameScore += 1
         scoreLabel.text = "Score: \(gameScore)"
-        if gameScore == 10 || gameScore == 25 || gameScore == 50 {
+        if gameScore == 5 || gameScore == 10 || gameScore == 20 {
             startNewLevel()
         }
     }
@@ -269,6 +269,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func startNewLevel() {
         
+        print("Start new level")
+        
         levelNumber += 1
         
         if self.action(forKey: "spawningEnemies") != nil {
@@ -278,10 +280,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var levelDuration = TimeInterval()
         
         switch levelNumber {
-        case 1: levelDuration = 1.2
-        case 2: levelDuration = 1
-        case 3: levelDuration = 0.8
-        case 4: levelDuration = 0.5
+        case 1: levelDuration = 2.5
+        case 2: levelDuration = 2.0
+        case 3: levelDuration = 1.5
+        case 4: levelDuration = 1.0
         default:
             levelDuration = 0.5
             print("Cannot find level info")
@@ -298,7 +300,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let shot = SKSpriteNode(imageNamed: "bullet")
         shot.name = "Shot"
-        shot.setScale(0.5)
+        shot.setScale(1)
         shot.position = player.position
         shot.zPosition = 1
         shot.physicsBody = SKPhysicsBody(rectangleOf: shot.size)
@@ -333,10 +335,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         enemy.physicsBody!.contactTestBitMask = PhysicsCategories.Player | PhysicsCategories.Shot
         self.addChild(enemy)
         
-        let moveEnemy = SKAction.move(to: endPoint, duration: 1.5)
+        let moveEnemy = SKAction.move(to: endPoint, duration: 2.5)
         let deleteEnemy = SKAction.removeFromParent()
-        let loseALifeAction = SKAction.run(loseALife)
-        let enemySequence = SKAction.sequence([moveEnemy, deleteEnemy, loseALifeAction])
+//        let loseALifeAction = SKAction.run(loseALife)
+        let enemySequence = SKAction.sequence([moveEnemy, deleteEnemy])
         
         if currentGameState == gameState.inGame {
             enemy.run(enemySequence)
